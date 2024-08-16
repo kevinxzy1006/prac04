@@ -1,21 +1,15 @@
 #include <iostream>
 #include "Person.h"
 
-PersonList createPersonList(int n)
-{
-    // create a PersonList struct
-    PersonList personlist;
-    personlist.numPeople = n;
+PersonList createPersonList(int n) {
+    PersonList personList;
+    personList.numPeople = n;
+    personList.people = new Person[n];
 
-    // Dynamically allocate n person struct arrays
-    personlist.people = new Person[n];
-
-    // Initialise the name and age of every Person
-    for (int i = 0; i < n; i++)
-    {
-        personlist.people[i].name = "John Doe";
-        personlist.people[i].age = 1;
+    for (int i = 0; i < n; ++i) {
+        personList.people[i].name = "Jane Doe";
+        personList.people[i].age = 1;
     }
 
-    return personlist;
+    return personList;
 }
