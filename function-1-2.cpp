@@ -14,7 +14,7 @@ PersonList createPersonList(int n)
     for (int i = 0; i < n; i++)
     {
         personlist.people[i].name = "John Doe";
-        personlist.people[i].age = 0;
+        personlist.people[i].age = 1;
     }
 
     return personlist;
